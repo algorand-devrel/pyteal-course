@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
 
 mkdir -p ./build/
+# clean
 rm -f ./build/*.teal
 
 set -e # die on error
-# source ./venv/Scripts/activate
-python ./approval.py > ./build/approval.teal
-python ./clear.py > ./build/clear.teal
-# deactivate
+
+python ./compile.py "$1" ./build/approval.teal ./build/clear.teal

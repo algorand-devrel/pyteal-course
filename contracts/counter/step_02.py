@@ -4,7 +4,8 @@ from pyteal.ast.bytes import Bytes
 from pyteal_helpers import program
 
 
-UINT64_MAX = 0xffffffffffffffff
+UINT64_MAX = 0xFFFFFFFFFFFFFFFF
+
 
 def approval():
     # globals
@@ -53,6 +54,10 @@ def approval():
             [Txn.application_args[0] == op_decrement, decrement],
         ),
     )
+
+
+def clear():
+    return Approve()
 
 
 if __name__ == "__main__":
