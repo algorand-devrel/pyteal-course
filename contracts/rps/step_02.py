@@ -150,7 +150,7 @@ def approval():
                     TxnField.type_enum: TxnType.Payment,
                     TxnField.receiver: Txn.accounts[account_index],
                     TxnField.amount: amount,
-                    TxnField.fee: Int(0),
+                    TxnField.fee: Int(0), # use fee pooling
                 }
             ),
             InnerTxnBuilder.Submit(),
@@ -194,17 +194,25 @@ def approval():
             ),
             If(winner.load() == Int(2))
             .Then(
+                # tie: refund wager to each party
                 Seq(
-                    Assert(Txn.fee >= Global.min_txn_fee() * 3),
-                    # tie: refund wager to each party
+                    # require first transaction fee to cover:
+                    # - own transaction fee
+                    # - each reward transaction fee
+                    Assert(Txn.fee() >= Global.min_txn_fee() * Int(3)),
                     send_reward(Int(0), wager.load()),
                     send_reward(Int(1), wager.load()),
                 )
             )
             .Else(
-                Assert(Txn.fee >= Global.min_txn_fee() * 2),
                 # send double wager to winner
-                send_reward(winner.load(), wager.load() * Int(2)),
+                Seq(
+                    # require first transaction fee to cover:
+                    # - own transaction fee
+                    # - reward transaction fee
+                    Assert(Txn.fee() >= Global.min_txn_fee() * Int(2)),
+                    send_reward(winner.load(), wager.load() * Int(2)),
+                )
             ),
             reset(Int(0)),
             reset(Int(1)),
