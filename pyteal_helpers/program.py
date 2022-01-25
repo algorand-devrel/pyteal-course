@@ -1,4 +1,6 @@
 from base64 import b64decode
+from dataclasses import dataclass
+from typing import Dict
 
 from algosdk.v2client.algod import AlgodClient
 from pyteal import *
@@ -48,15 +50,22 @@ def check_self(
     )
 
 
-def to_teal_app(pyteal: Expr) -> str:
+def application(pyteal: Expr) -> str:
     return compileTeal(pyteal, mode=Mode.Application, version=MAX_TEAL_VERSION)
 
 
-def to_bytecode(
-    algod_client: AlgodClient, pyteal: Expr = None, teal: str = None
-) -> bytes:
-    _teal = teal
-    if _teal is None:
-        _teal = to_teal_app(pyteal)
+@dataclass
+class CompiledSignature:
+    address: str
+    bytecode_b64: str
+    teal: str
 
-    return b64decode(algod_client.compile(_teal))
+
+def signature(algod_client: AlgodClient, pyteal: Expr) -> CompiledSignature:
+    teal = compileTeal(pyteal, mode=Mode.Signature, version=MAX_TEAL_VERSION)
+    compilation_result = algod_client.compile(teal)
+    return CompiledSignature(
+        address=compilation_result["hash"],
+        bytecode_b64=compilation_result["result"],
+        teal=teal,
+    )

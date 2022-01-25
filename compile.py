@@ -19,11 +19,11 @@ if __name__ == "__main__":
     contract = importlib.import_module(mod)
 
     if approval_out is None:
-        print(program.to_teal_app(contract.approval()))
+        print(program.application(contract.approval()))
     else:
         with open(approval_out, "w") as h:
-            h.write(program.to_teal_app(contract.approval()))
+            h.write(program.application(contract.approval()))
 
     if clear_out is not None:
         with open(clear_out, "w") as h:
-            h.write(program.to_teal_app(contract.clear()))
+            h.write(program.application(contract.clear()))

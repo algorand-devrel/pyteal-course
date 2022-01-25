@@ -1,6 +1,5 @@
 from pyteal import *
 from pyteal.ast.bytes import Bytes
-
 from pyteal_helpers import program
 
 
@@ -150,7 +149,7 @@ def approval():
                     TxnField.type_enum: TxnType.Payment,
                     TxnField.receiver: Txn.accounts[account_index],
                     TxnField.amount: amount,
-                    TxnField.fee: Int(0), # use fee pooling
+                    TxnField.fee: Int(0),  # use fee pooling
                 }
             ),
             InnerTxnBuilder.Submit(),
@@ -247,7 +246,3 @@ def approval():
 
 def clear():
     return Approve()
-
-
-if __name__ == "__main__":
-    print(program.to_teal_app(approval()))
