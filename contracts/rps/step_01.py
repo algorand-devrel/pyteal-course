@@ -36,7 +36,7 @@ def approval():
 
     @Subroutine(TealType.uint64)
     def is_valid_play(p: Expr):
-        first_letter = ScratchVar()
+        first_letter = ScratchVar(TealType.bytes)
         return Seq(
             first_letter.store(Substring(p, Int(0), Int(1))),
             Return(
