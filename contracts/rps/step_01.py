@@ -17,12 +17,10 @@ def approval():
     @Subroutine(TealType.none)
     def reset(account: Expr):
         return Seq(
-            [
-                App.localPut(account, local_opponent, Bytes("")),
-                App.localPut(account, local_wager, Int(0)),
-                App.localPut(account, local_commitment, Bytes("")),
-                App.localPut(account, local_reveal, Bytes("")),
-            ]
+            App.localPut(account, local_opponent, Bytes("")),
+            App.localPut(account, local_wager, Int(0)),
+            App.localPut(account, local_commitment, Bytes("")),
+            App.localPut(account, local_reveal, Bytes("")),
         )
 
     @Subroutine(TealType.uint64)
@@ -67,6 +65,7 @@ def approval():
                     Gtxn[1].close_remainder_to() == Global.zero_address(),
                     # second account has opted-in
                     App.optedIn(Int(1), Int(0)),
+                    is_empty(Int(0)),
                     is_empty(Int(1)),
                     # commitment
                     Txn.application_args.length() == Int(2),

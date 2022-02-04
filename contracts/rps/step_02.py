@@ -17,12 +17,10 @@ def approval():
     @Subroutine(TealType.none)
     def reset(account: Expr):
         return Seq(
-            [
-                App.localPut(account, local_opponent, Bytes("")),
-                App.localPut(account, local_wager, Int(0)),
-                App.localPut(account, local_commitment, Bytes("")),
-                App.localPut(account, local_reveal, Bytes("")),
-            ]
+            App.localPut(account, local_opponent, Bytes("")),
+            App.localPut(account, local_wager, Int(0)),
+            App.localPut(account, local_commitment, Bytes("")),
+            App.localPut(account, local_reveal, Bytes("")),
         )
 
     @Subroutine(TealType.uint64)
