@@ -1,0 +1,8 @@
+./sandbox enter algod
+
+cd /data
+
+goal app create --creator REKE434R7BABJVIV72V3WAPRZE2SIH6KA2OPAT47ABDRG7DKOIHUMQPZYA --approval-prog build/approval.teal --clear-prog build/clear.teal --global-byteslices 1 --global-ints 1 --local-byteslices 0 --local-ints 0
+
+goal app read --global --app-id 79406761 --guess-format
+
