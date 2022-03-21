@@ -1,5 +1,5 @@
 import sys
-import contracts_01.counter.step_02 as contract
+import contracts_01.counter.step_01 as contract
 
 from pyteal_helpers import program
 

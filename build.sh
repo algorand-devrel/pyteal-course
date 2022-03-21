@@ -7,4 +7,4 @@ rm -f ./build/*.teal
 set -e # die on error
 
 # python ./compile.py "" ./build/approval.teal ./build/clear.teal
-python ./compile.py "$1" ./build/approval.teal ./build/clear.teal
+python ./compile.py ./build/approval.teal ./build/clear.teal
