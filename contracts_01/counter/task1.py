@@ -5,7 +5,6 @@ def approval():
     global_owner = Bytes("owner")
     global_first = Bytes("first")
     global_second = Bytes("second")
-    global_third = Bytes("third")
 
     op_result = Bytes("result")
 
@@ -18,7 +17,6 @@ def approval():
         init=Seq(
             App.globalPut(global_first, Int(10)),
             App.globalPut(global_second, Int(20)),
-            App.globalPut(global_third, Int(0)),
             App.globalPut(global_owner, Txn.sender()),
             Approve()
         ),

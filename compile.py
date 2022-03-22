@@ -1,4 +1,3 @@
-import imp
 import sys
 # import contracts_01.counter.step_01 as contract
 import contracts_01.counter.task1 as contract
