@@ -6,3 +6,4 @@ goal app create --creator REKE434R7BABJVIV72V3WAPRZE2SIH6KA2OPAT47ABDRG7DKOIHUMQ
 
 goal app read --global --app-id 79406761 --guess-format
 
+goal app call --app-id 79551128 --from REKE434R7BABJVIV72V3WAPRZE2SIH6KA2OPAT47ABDRG7DKOIHUMQPZYA --app-arg "str:inc"
