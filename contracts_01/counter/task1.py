@@ -2,9 +2,9 @@ from pyteal import *
 from pyteal_helpers import program
 
 def approval():
-    global_owner = Bytes("owner")
-    global_first = Bytes("first")
-    global_second = Bytes("second")
+    global_owner = Bytes("owner") #Byteslices
+    global_first = Bytes("first") #Int
+    global_second = Bytes("second") #Int
 
     op_result = Bytes("result")
 

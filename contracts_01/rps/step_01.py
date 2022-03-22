@@ -1,5 +1,3 @@
-from cgitb import reset
-import re
 from pyteal import *
 from pyteal.ast.bytes import Bytes
 from pyteal_helpers import program
@@ -44,9 +42,9 @@ def approval():
         ),
         no_op=Seq(
             Cond(
-                [Txn.application_args(0)==op_challenge, create_challenge()],
-                [Txn.application_args(0)==op_accept, accept_challenge()],
-                [Txn.application_args(0)==op_reveal, reveal()],
+                [Txn.application_args[0]==op_challenge, create_challenge()],
+                [Txn.application_args[0]==op_accept, accept_challenge()],
+                [Txn.application_args[0]==op_reveal, reveal()],
             ),
             Reject(),
         )
