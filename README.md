@@ -28,4 +28,5 @@
 - [PyTeal Documentation](https://pyteal.readthedocs.io/en/latest/index.html)
 - [Algorand DevRel Example Contracts](https://github.com/algorand/smart-contracts)
 
-vintage physical above tonight error climb mansion claw alien tornado glory lens ketchup detail concert lock pen maze portion bridge exotic private minute ability violin
+alpha dolphin mean attract focus choice cable broken crime say elegant dinner unveil shoulder i
+nterest know oval donate setup cinnamon hundred reason increase abandon meadow
