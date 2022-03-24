@@ -2,10 +2,10 @@
 
 cd /data
 
-goal app create --creator REKE434R7BABJVIV72V3WAPRZE2SIH6KA2OPAT47ABDRG7DKOIHUMQPZYA --approval-prog build/approval.teal --clear-prog build/clear.teal --global-byteslices 1 --global-ints 1 --local-byteslices 0 --local-ints 0
+goal app create --creator R7XR2KMPPJGMORTRRNAWE3GGIVBCYZ2WKJDIEWNRGDJ6LRWMOD4YJ5W6YI --approval-prog build/approval.teal --clear-prog build/clear.teal --global-byteslices 1 --global-ints 1 --local-byteslices 0 --local-ints 0
 
-goal app read --global --app-id 79406761 --guess-format
+goal app read --local --app-id 79957872 --guess-format
 
-goal app call --app-id 79551128 --from REKE434R7BABJVIV72V3WAPRZE2SIH6KA2OPAT47ABDRG7DKOIHUMQPZYA --app-arg "str:inc"
+goal app call --app-id 79945490 --from R7XR2KMPPJGMORTRRNAWE3GGIVBCYZ2WKJDIEWNRGDJ6LRWMOD4YJ5W6YI --app-arg "str:result"
 
-goal app optin --from 3PB64CCNTWYV5JPNRDW5RWWWTCGRMSORP4DMGEP54FMJ3QLY6YWOTG3EB4 --app-id 79604023
+goal app optin --from R7XR2KMPPJGMORTRRNAWE3GGIVBCYZ2WKJDIEWNRGDJ6LRWMOD4YJ5W6YI --app-id 79968745
