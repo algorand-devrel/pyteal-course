@@ -2,10 +2,12 @@
 
 cd /data
 
-goal app create --creator R7XR2KMPPJGMORTRRNAWE3GGIVBCYZ2WKJDIEWNRGDJ6LRWMOD4YJ5W6YI --approval-prog build/approval.teal --clear-prog build/clear.teal --global-byteslices 1 --global-ints 1 --local-byteslices 0 --local-ints 0
+goal app create --creator FOYQQ63PXKQXQGK5B63XNJ6EVTEYHBPMN4WDKRLTPBJWEHPCN7RPUQGMPQ --approval-prog build/approval.teal --clear-prog build/clear.teal --global-byteslices 1 --global-ints 1 --local-byteslices 0 --local-ints 0
 
 goal app read --local --app-id 79957872 --guess-format
 
 goal app call --app-id 79945490 --from R7XR2KMPPJGMORTRRNAWE3GGIVBCYZ2WKJDIEWNRGDJ6LRWMOD4YJ5W6YI --app-arg "str:result"
 
 goal app optin --from R7XR2KMPPJGMORTRRNAWE3GGIVBCYZ2WKJDIEWNRGDJ6LRWMOD4YJ5W6YI --app-id 79968745
+
+goal app infor --app-id 79968745
