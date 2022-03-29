@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # load variables from config file
-source "$(dirname ${BASH_SOURCE[0]})/config.sh"
+source "$(dirname ${BASH_SOURCE[0]})/config_1.sh"
 
 # create challenge transaction
 goal app call \
@@ -28,8 +28,8 @@ goal clerk split -i challenge-grouped.tx -o challenge-split.tx
 goal clerk sign -i challenge-split-0.tx -o challenge-signed-0.tx
 goal clerk sign -i challenge-split-1.tx -o challenge-signed-1.tx
 
-# re-combine individually signed transactions
-cat challenge-signed-0.tx challenge-signed-1.tx > challenge-signed-final.tx
+# # re-combine individually signed transactions
+# cat challenge-signed-0.tx challenge-signed-1.tx > challenge-signed-final.tx
 
-# send transaction
-goal clerk rawsend -f challenge-signed-final.tx
+# # send transaction
+# goal clerk rawsend -f challenge-signed-final.tx

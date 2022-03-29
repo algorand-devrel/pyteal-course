@@ -28,5 +28,5 @@
 - [PyTeal Documentation](https://pyteal.readthedocs.io/en/latest/index.html)
 - [Algorand DevRel Example Contracts](https://github.com/algorand/smart-contracts)
 
-alpha dolphin mean attract focus choice cable broken crime say elegant dinner unveil shoulder i
-nterest know oval donate setup cinnamon hundred reason increase abandon meadow
+bulk annual casual step smoke indicate guilt attack joy space crawl frozen solve usual palace e
+agle dignity taxi fold banana clump fish check ability armor

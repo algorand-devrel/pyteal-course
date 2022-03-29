@@ -120,7 +120,31 @@ def approval():
 
     @Subroutine(TealType.none)
     def reveal():
-        return Reject()
+        return Seq(
+            program.check_self(
+                group_size=Int(1),
+                group_index=Int(0),
+            ),
+            program.check_rekey_zero(1),
+            Assert(
+                And(
+                    #Check mutual apponentship
+                    App.localGet(Txn.sender(), local_opponent=Txn.accounts[1]),
+                    App.localGet(Txn.accounts[1], local_opponent),
+
+                    #check same wager
+                    App.localGet(Txn.sender(), local_wager==App.localGet(Txn.accounts, local_wager)),
+
+                    # check commitmnet from challenger is not empty
+                    App.localGet(Txn.sender, local_commitment!= Bytes('')),
+
+                    # check reveal from opponent is not empty
+                    App.localGet(Txn.accounts[1], local_reveal!=Bytes('')),
+
+                    
+                )
+            )
+        )
 
     return program.event(
         init=Approve(),
