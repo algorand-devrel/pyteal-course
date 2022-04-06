@@ -28,5 +28,4 @@
 - [PyTeal Documentation](https://pyteal.readthedocs.io/en/latest/index.html)
 - [Algorand DevRel Example Contracts](https://github.com/algorand/smart-contracts)
 
-bulk annual casual step smoke indicate guilt attack joy space crawl frozen solve usual palace e
-agle dignity taxi fold banana clump fish check ability armor
+home mystery heavy library rabbit category violin absent behave grace praise sentence light uncover curtain dragon visa donkey half route another cloth spider abstract excite
