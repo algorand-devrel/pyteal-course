@@ -28,4 +28,5 @@
 - [PyTeal Documentation](https://pyteal.readthedocs.io/en/latest/index.html)
 - [Algorand DevRel Example Contracts](https://github.com/algorand/smart-contracts)
 
-home mystery heavy library rabbit category violin absent behave grace praise sentence light uncover curtain dragon visa donkey half route another cloth spider abstract excite
+submit maid entry define venue debate early album luggage first oval dash fall narrow vivid bad
+ge siren reopen basic daughter escape grunt surprise ability provide

@@ -1,3 +1,4 @@
+from ast import Store
 from pyteal import *
 from pyteal.ast.bytes import Bytes
 from pyteal_helpers import program
@@ -68,7 +69,7 @@ def approval():
         )
 
     @Subroutine(TealType.uint64)
-    def is_valid_play(play : Expr):
+    def is_valid_play(play: Expr):
         first_character = ScratchVar(TealType.bytes)
         return Seq(
             first_character.store(Substring(play, Int(0), Int(1))),
@@ -78,7 +79,21 @@ def approval():
                     first_character.load() == Bytes("p"),
                     first_character.load() == Bytes("s"),
                 )
-            )
+            ),
+        )
+
+    @Subroutine(TealType.uint64)
+    def play_value(play: Expr):
+        first_character = ScratchVar(TealType.bytes)
+        return Seq(
+            first_character.store(Substring(play, Int(0), Int(1))),
+            Return(
+                Cond(
+                    [first_character.load() == Bytes("r"), Int(0)],
+                    [first_character.load() == Bytes("p"), Int(1)],
+                    [first_character.load() == Bytes("s"), Int(2)],
+                )
+            ),
         )
 
     @Subroutine(TealType.none)
@@ -92,17 +107,15 @@ def approval():
             program.check_rekey_zero(2),
             Assert(
                 And(
-                    #check that challenger account has opted in
+                    # check that challenger account has opted in
                     App.optedIn(Txn.accounts[1], Global.current_application_id()),
                     # check that challenger account has not already accepted
                     App.localGet(Txn.accounts[1], local_opponent) == Txn.sender(),
-
                     # check wager payment
                     Gtxn[1].type_enum() == TxnType.Payment,
                     Gtxn[1].receiver() == Global.current_application_address(),
                     Gtxn[1].close_remainder_to() == Global.zero_address(),
                     Gtxn[1].amount() == App.localGet(Txn.accounts[1], local_wager),
-
                     # validate play
                     Txn.application_args.length() == Int(2),
                     is_valid_play(Txn.application_args[1]),
@@ -118,8 +131,34 @@ def approval():
             Approve(),
         )
 
+    @Subroutine(TealType.uint64)
+    def winner_account_index(challenger_play: Expr, opponent_play: Expr):
+        # Skip tie condition
+        return Return(
+            Cond(
+                [(opponent_play + Int(1)) % Int(3) == challenger_play, Int(0)],
+                [(challenger_play + Int(1)) % Int(3) == opponent_play, Int(1)],
+                If(
+                    challenger_play.load() == opponent_play.load(),
+                )
+                .Then(
+                    # tie
+                    # return wagers
+                    Seq(),
+                )
+                .Else(
+                    # win
+                    # send rewards
+                    Seq(),
+                ),
+            )
+        )
+
     @Subroutine(TealType.none)
     def reveal():
+        challenger_play = ScratchVar(TealType.uint64)
+        opponent_play = ScratchVar(TealType.uint64)
+
         return Seq(
             program.check_self(
                 group_size=Int(1),
@@ -128,22 +167,22 @@ def approval():
             program.check_rekey_zero(1),
             Assert(
                 And(
-                    #Check mutual apponentship
-                    App.localGet(Txn.sender(), local_opponent=Txn.accounts[1]),
-                    App.localGet(Txn.accounts[1], local_opponent),
-
-                    #check same wager
-                    App.localGet(Txn.sender(), local_wager==App.localGet(Txn.accounts, local_wager)),
-
+                    # Check mutual apponentship
+                    App.localGet(Txn.sender(), local_opponent) == Txn.accounts[1],
+                    App.localGet(Txn.accounts[1], local_opponent) == Txn.sender(),
+                    # check same wager
+                    App.localGet(Txn.sender(), local_wager)
+                    == App.localGet(Txn.accounts[1], local_wager),
                     # check commitmnet from challenger is not empty
-                    App.localGet(Txn.sender, local_commitment!= Bytes('')),
-
+                    App.localGet(Txn.sender(), local_commitment) != Bytes(""),
                     # check reveal from opponent is not empty
-                    App.localGet(Txn.accounts[1], local_reveal!=Bytes('')),
-
-                    
+                    App.localGet(Txn.accounts[1], local_reveal) != Bytes(""),
                 )
-            )
+            ),
+            challenger_play.store(play_value(Txn.application_args[1])),
+            opponent_play.store(
+                play_value(App.localGet(Txn.accounts[1], local_reveal))
+            ),
         )
 
     return program.event(
