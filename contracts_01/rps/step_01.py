@@ -193,7 +193,7 @@
 #                 # tie
 #                 # return wagers
 #                 Seq(
-#                     send_reward(Int(0), wager.load()), 
+#                     send_reward(Int(0), wager.load()),
 #                     send_reward(Int(1), wager.load())
 #                 ),
 #             )
