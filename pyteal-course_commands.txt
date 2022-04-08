@@ -3,12 +3,12 @@
 cd /data
 
 Deploy script
-goal app create --creator NMBYQOCWEDBMVQZSWTMIW3JVOZV2FKLLPWMWI6WVICOO3RC2XY3NY27GRE --approval-prog build/approval.teal --clear-prog build/clear.teal --global-byteslices 0 --global-ints 0 --local-byteslices 3 --local-ints 1
+goal app create --creator BZE3H667NKWSXKQ5IJFAJVHD34FVK42O7V5HPQEBV6WCYNYMS4GGK37T7I --approval-prog build/approval.teal --clear-prog build/clear.teal --global-byteslices 0 --global-ints 0 --local-byteslices 3 --local-ints 1
 
 goal app read --local --app-id 82639163 --guess-format --from NMBYQOCWEDBMVQZSWTMIW3JVOZV2FKLLPWMWI6WVICOO3RC2XY3NY27GRE
 
 goal app call --app-id 82639163 --from NMBYQOCWEDBMVQZSWTMIW3JVOZV2FKLLPWMWI6WVICOO3RC2XY3NY27GRE --app-arg "str:result"
 
-goal app optin --app-id 82644512 --from OYB7CAY7JTD45XL3SFZWE35KWUFCX22GOQXRQBVIKA7KN33UIDUAIRLYBY
+goal app optin --app-id 82803404 --from X5XX436NLVV43CSTX46RGV37JYSCH5BHHPLIZS7DAVPYDIBCRPHRR3AOBQ
 
-goal app info --app-id 82639163
+goal app info --app-id 82803404
