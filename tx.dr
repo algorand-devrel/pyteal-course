@@ -1,0 +1,278 @@
+{
+  "accounts": [
+    {
+      "address": "2M75JHQTYM6ALUTIXINMSOTVWXUTL7AODESSSOXUJZJTL3MFB5HRNJOZOQ",
+      "amount": 9872544,
+      "amount-without-pending-rewards": 9872544,
+      "apps-local-state": [
+        {
+          "id": 83129647,
+          "key-value": [
+            {
+              "key": "b3Bwb25lbnQ=",
+              "value": {
+                "bytes": "",
+                "type": 1,
+                "uint": 0
+              }
+            },
+            {
+              "key": "Y29tbWl0bWVudA==",
+              "value": {
+                "bytes": "",
+                "type": 1,
+                "uint": 0
+              }
+            },
+            {
+              "key": "d2FnZXI=",
+              "value": {
+                "bytes": "",
+                "type": 2,
+                "uint": 0
+              }
+            },
+            {
+              "key": "cmV2ZWFs",
+              "value": {
+                "bytes": "",
+                "type": 1,
+                "uint": 0
+              }
+            }
+          ],
+          "schema": {
+            "num-byte-slice": 3,
+            "num-uint": 1
+          }
+        },
+        {
+          "id": 83137735,
+          "key-value": [
+            {
+              "key": "b3Bwb25lbnQ=",
+              "value": {
+                "bytes": "FopGx594w2AngZeGi1VeQFyyZsqY34AoWIRdsfJaVr0=",
+                "type": 1,
+                "uint": 0
+              }
+            },
+            {
+              "key": "cmV2ZWFs",
+              "value": {
+                "bytes": "cg==",
+                "type": 1,
+                "uint": 0
+              }
+            },
+            {
+              "key": "Y29tbWl0bWVudA==",
+              "value": {
+                "bytes": "",
+                "type": 1,
+                "uint": 0
+              }
+            },
+            {
+              "key": "d2FnZXI=",
+              "value": {
+                "bytes": "",
+                "type": 2,
+                "uint": 123456
+              }
+            }
+          ],
+          "schema": {
+            "num-byte-slice": 3,
+            "num-uint": 1
+          }
+        }
+      ],
+      "apps-total-schema": {
+        "num-byte-slice": 6,
+        "num-uint": 2
+      },
+      "min-balance": 657000,
+      "pending-rewards": 0,
+      "reward-base": 27521,
+      "rewards": 0,
+      "round": 20887913,
+      "status": "Offline",
+      "total-apps-opted-in": 2,
+      "total-assets-opted-in": 0,
+      "total-created-apps": 0,
+      "total-created-assets": 0
+    },
+    {
+      "address": "C2FENR47PDBWAJ4BS6DIWVK6IBOLEZWKTDPYAKCYQRO3D4S2K26YS5YPSQ",
+      "amount": 9871544,
+      "amount-without-pending-rewards": 9871544,
+      "apps-local-state": [
+        {
+          "id": 83129647,
+          "key-value": [
+            {
+              "key": "Y29tbWl0bWVudA==",
+              "value": {
+                "bytes": "",
+                "type": 1,
+                "uint": 0
+              }
+            },
+            {
+              "key": "b3Bwb25lbnQ=",
+              "value": {
+                "bytes": "",
+                "type": 1,
+                "uint": 0
+              }
+            },
+            {
+              "key": "cmV2ZWFs",
+              "value": {
+                "bytes": "",
+                "type": 1,
+                "uint": 0
+              }
+            },
+            {
+              "key": "d2FnZXI=",
+              "value": {
+                "bytes": "",
+                "type": 2,
+                "uint": 0
+              }
+            }
+          ],
+          "schema": {
+            "num-byte-slice": 3,
+            "num-uint": 1
+          }
+        },
+        {
+          "id": 83137735,
+          "key-value": [
+            {
+              "key": "b3Bwb25lbnQ=",
+              "value": {
+                "bytes": "0z/UnhPDPAXSaLoayTp1tek1/A4ZJSk69E5TNe2FD08=",
+                "type": 1,
+                "uint": 0
+              }
+            },
+            {
+              "key": "Y29tbWl0bWVudA==",
+              "value": {
+                "bytes": "OkpPf4DXwIsOjyOYeJRYF9J5Vanu1IC8Wg03gwmn/cE=",
+                "type": 1,
+                "uint": 0
+              }
+            },
+            {
+              "key": "d2FnZXI=",
+              "value": {
+                "bytes": "",
+                "type": 2,
+                "uint": 123456
+              }
+            },
+            {
+              "key": "cmV2ZWFs",
+              "value": {
+                "bytes": "",
+                "type": 1,
+                "uint": 0
+              }
+            }
+          ],
+          "schema": {
+            "num-byte-slice": 3,
+            "num-uint": 1
+          }
+        }
+      ],
+      "apps-total-schema": {
+        "num-byte-slice": 6,
+        "num-uint": 2
+      },
+      "created-apps": [
+        {
+          "id": 83137735,
+          "params": {
+            "approval-program": "BSAEAAECAyYIAAV3YWdlcghvcHBvbmVudAZyZXZlYWwKY29tbWl0bWVudAFyAXABczEYIhJAAG0xGYEFEkAAYzEZgQQSQABZMRkjEkAATDEZJBJAAEMxGSISQAABADYaAIAJY2hhbGxlbmdlEkAAIzYaAIAGYWNjZXB0EkAADjYaACsSQAABAIgBkyJDiADAQv/4iABjQv/yIkMiiAAII0MiQyJDI0M1ADQAKihmNAApImY0ACcEKGY0ACsoZok1ATQBKmIoEjQBKWIiEhA0AScEYigSEDQBK2IoEhCJNQI0AiIjUjUDNAMnBRI0AycGEhE0AycHEhGJMgQkEjEWIhIQRDMAIDIDEjMBIDIDEhBEMwEQIxIzAQcyChIQMwEJMgMSECMiYRAiiP+TECOI/44QMRskEhBEMQAqNhwBZjEAKTMBCGYxACcENhoBZiNDMgQkEjEWIhIQRDMAIDIDEjMBIDIDEhBEIyJhIypiMQASEDMBECMSEDMBBzIKEhAzAQkyAxIQMwEIIyliEhAxGyQSEDYaAYj/RRBEIio2HAFmIikzAQhmIis2GgFmI0M1BjQGIiNSNQc0BycFEkAAGTQHJwYSQAANNAcnBxJAAAEAJEIABSNCAAEiiTUJNQg0CDQJEkAAITQIIwglGDQJEkAAETQJIwglGDQIEkAAAQAiQgAFI0IAASSJNQs1CrEjshA0CsAcsgc0C7IIs4kyBCMSMRYiEhBEMwAgMgMSRCIqYjYcARIjKmIxABIQIiliIyliEhAiJwRiKBMQIytiKBMQMRskEhA2GgEBIicEYhIQRCIpYjUFNhoBiP9CIytiiP88iP9lNQQ0BCQSQAAMNAQ0BSQLiP+CQgAMIjQFiP95IzQFiP9zIoj+DCOI/ggjQw==",
+            "clear-state-program": "BYEBQw==",
+            "creator": "C2FENR47PDBWAJ4BS6DIWVK6IBOLEZWKTDPYAKCYQRO3D4S2K26YS5YPSQ",
+            "local-state-schema": {
+              "num-byte-slice": 3,
+              "num-uint": 1
+            }
+          }
+        }
+      ],
+      "min-balance": 757000,
+      "pending-rewards": 0,
+      "reward-base": 27521,
+      "rewards": 0,
+      "round": 20887913,
+      "status": "Offline",
+      "total-apps-opted-in": 2,
+      "total-assets-opted-in": 0,
+      "total-created-apps": 1,
+      "total-created-assets": 0
+    },
+    {
+      "address": "5HIOTIETVIBBLRP6V2JWOJ25LPHT3SK7A7O76KK2LEY2Y36D6X22LVXFK4",
+      "amount": 246912,
+      "amount-without-pending-rewards": 246912,
+      "min-balance": 100000,
+      "pending-rewards": 0,
+      "reward-base": 27521,
+      "rewards": 0,
+      "round": 20887913,
+      "status": "Offline",
+      "total-apps-opted-in": 0,
+      "total-assets-opted-in": 0,
+      "total-created-apps": 0,
+      "total-created-assets": 0
+    }
+  ],
+  "apps": [
+    {
+      "id": 83137735,
+      "params": {
+        "approval-program": "BSAEAAECAyYIAAV3YWdlcghvcHBvbmVudAZyZXZlYWwKY29tbWl0bWVudAFyAXABczEYIhJAAG0xGYEFEkAAYzEZgQQSQABZMRkjEkAATDEZJBJAAEMxGSISQAABADYaAIAJY2hhbGxlbmdlEkAAIzYaAIAGYWNjZXB0EkAADjYaACsSQAABAIgBkyJDiADAQv/4iABjQv/yIkMiiAAII0MiQyJDI0M1ADQAKihmNAApImY0ACcEKGY0ACsoZok1ATQBKmIoEjQBKWIiEhA0AScEYigSEDQBK2IoEhCJNQI0AiIjUjUDNAMnBRI0AycGEhE0AycHEhGJMgQkEjEWIhIQRDMAIDIDEjMBIDIDEhBEMwEQIxIzAQcyChIQMwEJMgMSECMiYRAiiP+TECOI/44QMRskEhBEMQAqNhwBZjEAKTMBCGYxACcENhoBZiNDMgQkEjEWIhIQRDMAIDIDEjMBIDIDEhBEIyJhIypiMQASEDMBECMSEDMBBzIKEhAzAQkyAxIQMwEIIyliEhAxGyQSEDYaAYj/RRBEIio2HAFmIikzAQhmIis2GgFmI0M1BjQGIiNSNQc0BycFEkAAGTQHJwYSQAANNAcnBxJAAAEAJEIABSNCAAEiiTUJNQg0CDQJEkAAITQIIwglGDQJEkAAETQJIwglGDQIEkAAAQAiQgAFI0IAASSJNQs1CrEjshA0CsAcsgc0C7IIs4kyBCMSMRYiEhBEMwAgMgMSRCIqYjYcARIjKmIxABIQIiliIyliEhAiJwRiKBMQIytiKBMQMRskEhA2GgEBIicEYhIQRCIpYjUFNhoBiP9CIytiiP88iP9lNQQ0BCQSQAAMNAQ0BSQLiP+CQgAMIjQFiP95IzQFiP9zIoj+DCOI/ggjQw==",
+        "clear-state-program": "BYEBQw==",
+        "creator": "C2FENR47PDBWAJ4BS6DIWVK6IBOLEZWKTDPYAKCYQRO3D4S2K26YS5YPSQ",
+        "local-state-schema": {
+          "num-byte-slice": 3,
+          "num-uint": 1
+        }
+      }
+    }
+  ],
+  "latest-timestamp": 1649594136,
+  "protocol-version": "https://github.com/algorandfoundation/specs/tree/d5ac876d7ede07367dbaa26e149aa42589aac1f7",
+  "round": 20887913,
+  "sources": null,
+  "txns": [
+    {
+  "txn": {
+    "apaa": [
+      "cmV2ZWFs",
+      "cy0xNDMyOTg0Nzk3NDk0Nzk3NDk="
+    ],
+    "apat": [
+      "2M75JHQTYM6ALUTIXINMSOTVWXUTL7AODESSSOXUJZJTL3MFB5HRNJOZOQ"
+    ],
+    "apid": 83137735,
+    "fee": 1000,
+    "fv": 20887914,
+    "gh": "SGO1GKSzyE7IEPItTxCByw9x8FmnrCDexi9/cOUJOiI=",
+    "lv": 20888914,
+    "note": "Q/+hcVM2z/I=",
+    "snd": "C2FENR47PDBWAJ4BS6DIWVK6IBOLEZWKTDPYAKCYQRO3D4S2K26YS5YPSQ",
+    "type": "appl"
+  }
+}
+  ]
+}

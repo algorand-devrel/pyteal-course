@@ -9,4 +9,5 @@ goal app call \
     -f "$CHALLENGER_ACCOUNT" \
     --app-account "$OPPONENT_ACCOUNT" \
     --app-arg "str:reveal" \
-    --app-arg "str:$CHALLENGER_REVEAL"
+    --app-arg "str:$CHALLENGER_REVEAL" \
+    --dryrun-dump -o tx.dr
