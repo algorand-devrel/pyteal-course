@@ -28,8 +28,8 @@ goal clerk split -i challenge-grouped.tx -o challenge-split.tx
 goal clerk sign -i challenge-split-0.tx -o challenge-signed-0.tx
 goal clerk sign -i challenge-split-1.tx -o challenge-signed-1.tx
 
-# # re-combine individually signed transactions
-# cat challenge-signed-0.tx challenge-signed-1.tx > challenge-signed-final.tx
+# re-combine individually signed transactions
+cat challenge-signed-0.tx challenge-signed-1.tx > challenge-signed-final.tx
 
-# # send transaction
-# goal clerk rawsend -f challenge-signed-final.tx
+# send transaction
+goal clerk rawsend -f challenge-signed-final.tx

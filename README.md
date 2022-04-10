@@ -28,5 +28,4 @@
 - [PyTeal Documentation](https://pyteal.readthedocs.io/en/latest/index.html)
 - [Algorand DevRel Example Contracts](https://github.com/algorand/smart-contracts)
 
-submit maid entry define venue debate early album luggage first oval dash fall narrow vivid bad
-ge siren reopen basic daughter escape grunt surprise ability provide
+company multiply warrior quiz object surprise build seminar improve lottery exact word level mind stand hub shoulder today city table blind dismiss acid ability grit
